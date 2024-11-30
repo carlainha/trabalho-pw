@@ -12,7 +12,7 @@
 
 .post + .post{
     margin-top: 2rem;
-    color: var(--brown-500);
+    color: var(--brown-200);
 }
 
 .post > header time{
@@ -21,7 +21,7 @@
 
 .content {
     margin-top: 1.5rem;
-    color: var(--brown-101);
+    color: var(--white);
     line-height: 1.6;
 }
 
@@ -31,7 +31,7 @@
 
 .content a{
     font-weight: bold;
-    color: var(--brown-400);
+    color: var(--brown-100);
     text-decoration: none;
 }
 

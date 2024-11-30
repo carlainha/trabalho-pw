@@ -25,7 +25,7 @@ export function Post({author, dataPublicacao, content}){
                     />
                     <div className={styles.authorInfo}>
                         <strong>{author.nome}</strong>
-                        <span>Jogadora de The Sims 4</span>
+                        <span>{author.cargo}</span>
                     </div>
                 </div>
                 <time title={dataFormatada} dateTime={dataPublicacao.toISOString()}>
@@ -40,10 +40,15 @@ export function Post({author, dataPublicacao, content}){
                             return <p>{line.content}</p>;
                        } 
                        else if (line.type === 'link'){
-                            return <p><a target='blank' href={line.content}>{line.content}</a></p>
+                            return <p><a target='blank' href={line.content}>{line.text}</a></p>
+                       }
+
+                       else if(line.type === 'image'){
+                        return <img src={line.content} alt="" />
                        }
                     })
                 }
+
             </div>
             
             <form className={styles.commentForm}>
